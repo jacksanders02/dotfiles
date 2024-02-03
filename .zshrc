@@ -64,8 +64,11 @@ alias xr="vim ~/.Xresources"
 alias zshrc="vim ~/.zshrc"
 alias userChrome.css="vim ~/thm/Firefox/userChrome.css"
 alias rc.lua="vim ~/.config/awesome/rc.lua"
-alias awesomeconf="ranger ~/.config/awesome" 
+alias awesomeconf="ranger ~/.config/awesome"
 alias kittyconf="vim ~/.config/kitty/kitty.conf"
 alias fontconf="vim ~/.config/fontconfig/fonts.conf"
 
 alias ll="ls -A -h -l --group-directories-first --color=auto"
+
+# University-related aliases
+source ~/.university_aliases
