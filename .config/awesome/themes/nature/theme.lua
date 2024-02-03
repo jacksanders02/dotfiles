@@ -51,6 +51,7 @@ theme.border_width  = dpi(3)
 theme.border_color_normal = unfocused_colour
 theme.border_color_active = focused_colour
 theme.border_color_marked = "#CC9393"
+theme.client_corner_radius = 8
 -- }}}
 
 -- {{{ Titlebar

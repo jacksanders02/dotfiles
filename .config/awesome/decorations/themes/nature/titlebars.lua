@@ -1,8 +1,3 @@
--- This decoration theme will round clients according to your theme's
--- border_radius value
---decorations.enable_rounding()
---
-
 function buttons_widget(c)
     return wibox.widget {
         -- Create buttons with padding between

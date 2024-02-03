@@ -57,7 +57,7 @@ function _M.create_layoutbox(s)
         },
         widget = wibox.container.margin,
         left = dpi(6),
-        right = dpi(12),
+        right = dpi(6),
         top = dpi(6),
         bottom = dpi(6),
     }
@@ -147,8 +147,6 @@ function _M.create_wibox(s)
     return awful.wibar{
         screen = s,
         position = 'top',
-        height = beautiful.titlebar_size * 1.5,
-        bg = beautiful.bg_normal,
         widget = {
             layout = wibox.layout.align.horizontal,
             -- left widgets
