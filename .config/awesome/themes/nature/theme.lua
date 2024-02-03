@@ -106,21 +106,7 @@ theme.menu_submenu_icon      = icon_path .. "submenu.svg"
 
 -- {{{ Layout
 theme.layout_tile       = layout_icon_path .. "tile.svg"
-theme.layout_tileleft   = layout_icon_path .. "tileleft.svg"
-theme.layout_tilebottom = layout_icon_path .. "tilebottom.svg"
-theme.layout_tiletop    = layout_icon_path .. "tiletop.svg"
 theme.layout_fairv      = layout_icon_path .. "fairv.svg"
-theme.layout_fairh      = layout_icon_path .. "fairh.svg"
-theme.layout_spiral     = layout_icon_path .. "spiral.svg"
-theme.layout_dwindle    = layout_icon_path .. "dwindle.svg"
-theme.layout_max        = layout_icon_path .. "max.svg"
-theme.layout_fullscreen = layout_icon_path .. "fullscreen.svg"
-theme.layout_magnifier  = layout_icon_path .. "magnifier.svg"
-theme.layout_floating   = layout_icon_path .. "floating.svg"
-theme.layout_cornernw   = layout_icon_path .. "cornernw.svg"
-theme.layout_cornerne   = layout_icon_path .. "cornerne.svg"
-theme.layout_cornersw   = layout_icon_path .. "cornersw.svg"
-theme.layout_cornerse   = layout_icon_path .. "cornerse.svg"
 -- }}}
 
 -- {{{ Titlebar Button Icons

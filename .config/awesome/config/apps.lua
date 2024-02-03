@@ -1,11 +1,11 @@
 local _M = {
-    terminal   = os.getenv('TERMINAL')   or 'xterm',
-    editor     = os.getenv('EDITOR')     or 'vim',
-    browser    = os.getenv('BROWSER')    or 'firefox',
-    screenshot = os.getenv('SCREENSHOT') or 'flameshot gui'
+    terminal = os.getenv('TERMINAL')   or 'xterm',
+    editor = os.getenv('EDITOR')     or 'vim',
+    browser = 'firefox-developer-edition',
+    screenshot= 'flameshot gui',
 }
 
-_M.editor_cmd = _M.terminal .. ' -e ' .. _M.editor
-_M.manual_cmd = _M.terminal .. ' -e man awesome'
+_M.editor_cmd = _M.terminal .. '-1 --class editor -e ' .. _M.editor
+_M.file_manager_cmd = _M.terminal .. '-1 --class files -e ranger'
 
 return _M
