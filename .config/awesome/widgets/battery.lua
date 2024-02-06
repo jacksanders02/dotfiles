@@ -1,6 +1,6 @@
 local b_info = {}
 
-b_info.charging = true
+b_info.charging = ""
 b_info.level = 100
 
 local get_image = function()
