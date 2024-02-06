@@ -24,6 +24,28 @@ _M.launcher = awful.widget.launcher{
 _M.keyboardlayout = awful.widget.keyboardlayout()
 _M.textclock      = wibox.widget.textclock()
 
+local bbox = require("widgets.battery")
+_M.batterybox = wibox.widget {
+    bbox.widget,
+    widget = wibox.container.margin,
+    left = dpi(6),
+    right = dpi(6),
+    top = dpi(6),
+    bottom = dpi(6),
+}
+
+_M.batterytooltip = awful.tooltip {
+    objects = { _M.batterybox },
+    timer_function = function()
+        local charge_string = "Full"
+        if not bbox.level == 100 then
+            charge_string = "Charging"
+        elseif not bbox.charging then
+            charge_string = "Discharging"
+        end
+        return string.format("%s%%, %s", bbox.level, charge_string)
+    end,
+}
 
 function _M.create_promptbox() return awful.widget.prompt() end
 
@@ -166,6 +188,7 @@ function _M.create_wibox(s)
                 _M.keyboardlayout,
                 wibox.widget.systray(),
                 _M.textclock,
+                _M.batterybox,
                 s.layoutbox,
             }
         }

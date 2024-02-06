@@ -12,11 +12,9 @@ local gears = require("gears")
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
-local icon_path = themes_path .. theme_name .. "/icons/"
 local layout_icon_path = themes_path .. theme_name .. "/layouts/"
 local titlebar_icon_path = themes_path .. theme_name .. "/titlebar/"
-local weather_icon_path = themes_path .. theme_name .. "/weather/"
-local taglist_icon_path = themes_path .. theme_name .. "/taglist/"
+local widget_icon_path = themes_path .. theme_name .. "/widget_icons/"
 local tip = titlebar_icon_path --alias to save time/space
 local xrdb = xresources.get_current_theme()
 
@@ -24,7 +22,7 @@ local xrdb = xresources.get_current_theme()
 local theme = {}
 theme.wallpaper = themes_path .. theme_name .. "/zenburn-background.svg"
 -- }}}
-
+theme.battery_icon_path = widget_icon_path .. "battery/"
 
 -- {{{ Colours
 local focused_colour = "#f2e8cf"
@@ -93,22 +91,11 @@ theme.menu_height = dpi(15)
 theme.menu_width  = dpi(100)
 -- }}}
 
--- {{{ Icons
--- {{{ Taglist
-theme.taglist_squares_sel   = taglist_icon_path .. "squarefz.svg"
-theme.taglist_squares_unsel = taglist_icon_path .. "squarez.svg"
---theme.taglist_squares_resize = "false"
--- }}}
-
--- {{{ Misc
-theme.awesome_icon           = icon_path .. "awesome-icon.svg"
-theme.menu_submenu_icon      = icon_path .. "submenu.svg"
--- }}}
-
 -- {{{ Layout
 theme.layout_tile       = layout_icon_path .. "tile.svg"
 theme.layout_fairv      = layout_icon_path .. "fairv.svg"
 -- }}}
+
 
 -- {{{ Titlebar Button Icons
 local tb_buttons = {

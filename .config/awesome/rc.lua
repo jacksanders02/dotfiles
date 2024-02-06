@@ -28,6 +28,9 @@ local decoration_themes = {
 }
 local decoration_theme = decoration_themes[1]
 
+local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), theme)
+beautiful.init(theme_path)
+
 -- load key and mouse bindings
 require'bindings'
 
@@ -37,8 +40,7 @@ require'rules'
 -- load signals
 require'signals'
 
-local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), theme)
-beautiful.init(theme_path)
+
 
 -- load decorations
 decorations = require("decorations")
