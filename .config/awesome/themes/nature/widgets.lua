@@ -24,6 +24,7 @@ _M.launcher = awful.widget.launcher{
 _M.keyboardlayout = awful.widget.keyboardlayout()
 _M.textclock      = wibox.widget.textclock()
 
+-- Load battery widget
 local bbox = require("widgets.battery")
 _M.batterybox = wibox.widget {
     bbox.widget,
@@ -34,13 +35,15 @@ _M.batterybox = wibox.widget {
     bottom = dpi(6),
 }
 
+-- Set up tooltip to display battery level on hover
 _M.batterytooltip = awful.tooltip {
     objects = { _M.batterybox },
     timer_function = function()
         local charge_string = "Full"
-        if not bbox.level == 100 then
+        if not (bbox.level == 100) then
             charge_string = "Charging"
-        elseif not bbox.charging then
+        end
+        if not (bbox.charging) then
             charge_string = "Discharging"
         end
         return string.format("%s%%, %s", bbox.level, charge_string)
