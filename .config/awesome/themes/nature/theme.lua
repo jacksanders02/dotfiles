@@ -23,6 +23,7 @@ local theme = {}
 theme.wallpaper = themes_path .. theme_name .. "/zenburn-background.svg"
 -- }}}
 theme.battery_icon_path = widget_icon_path .. "battery/"
+theme.volume_icon_path = widget_icon_path .. "volume/"
 
 -- {{{ Colours
 local focused_colour = "#f2e8cf"

@@ -35,6 +35,18 @@ _M.batterybox = wibox.widget {
     bottom = dpi(6),
 }
 
+-- Load audio widget
+local volumebox = require("widgets.audio")
+_M.volumebox = {
+    volumebox.widget,
+    widget = wibox.container.margin,
+    left = dpi(6),
+    right = dpi(6),
+    top = dpi(6),
+    bottom = dpi(6),
+
+}
+
 -- Set up tooltip to display battery level on hover
 _M.batterytooltip = awful.tooltip {
     objects = { _M.batterybox },
@@ -191,6 +203,7 @@ function _M.create_wibox(s)
                 _M.keyboardlayout,
                 wibox.widget.systray(),
                 _M.textclock,
+                _M.volumebox,
                 _M.batterybox,
                 s.layoutbox,
             }
