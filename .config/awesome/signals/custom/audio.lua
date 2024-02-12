@@ -42,6 +42,9 @@ local function emit_volume_info()
     end)
 end
 
+-- Emit once to get current volume
+emit_volume_info()
+
 -- Kill old pactl subscribe processes
 awful.spawn.easy_async({"pkill", "--full", "--uid", os.getenv("USER"), "^pactl subscribe"}, function ()
     -- Run emit_volume_info() with each line printed

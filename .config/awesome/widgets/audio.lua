@@ -1,6 +1,6 @@
 local audio_info = {
     mute = 1,
-    volume = 68,
+    volume = -1,
 }
 
 local get_image = function()
