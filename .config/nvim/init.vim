@@ -24,3 +24,5 @@ set notimeout
 
 " Set tab to indend with 4 space characters
 set shiftwidth=4 expandtab
+
+autocmd BufNewFile *.ino 0r ~/.config/nvim/templates/template.ino
