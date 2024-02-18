@@ -48,19 +48,7 @@ _M.volumebox = {
 }
 
 -- Set up tooltip to display battery level on hover
-_M.batterytooltip = awful.tooltip {
-    objects = { _M.batterybox },
-    timer_function = function()
-        local charge_string = "Full"
-        if not (bbox.level == 100) then
-            charge_string = "Charging"
-        end
-        if not (bbox.charging) then
-            charge_string = "Discharging"
-        end
-        return string.format("%s%%, %s", bbox.level, charge_string)
-    end,
-}
+_M.batterytooltip = bbox.create_tooltip(_M.batterybox, bbox)
 
 function _M.create_promptbox() return awful.widget.prompt() end
 

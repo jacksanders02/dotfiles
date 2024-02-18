@@ -13,6 +13,22 @@ b_info.widget = wibox.widget {
     widget = wibox.widget.imagebox
 }
 
+b_info.create_tooltip = function(bbox_object, bbox_data)
+    return awful.tooltip {
+        objects = { bbox_object },
+        timer_function = function()
+            local charge_string = "Full"
+            if not (bbox_data.level == 100) then
+                charge_string = "Charging"
+            end
+            if not (bbox_data.charging) then
+                charge_string = "Discharging"
+          end
+            return string.format("%s%%, %s", bbox_data.level, charge_string)
+        end,
+    }
+end
+
 awesome.connect_signal("custom::battery", function(value)
     b_info.level = value
     b_info.widget:set_image(beautiful.battery_icon_path .. get_image())
