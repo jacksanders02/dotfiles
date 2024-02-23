@@ -80,6 +80,7 @@ alias fontconf="vim ~/.config/fontconfig/fonts.conf"
 alias ll="ls -A -h -l --group-directories-first --color=auto"
 alias vol="pamixer --set-volume"
 alias localip="ip -4 -br a"
+alias portgrep="ss -tanp | grep "
 
 # University-related aliases
 source ~/.university_aliases
