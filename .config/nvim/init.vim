@@ -25,4 +25,7 @@ set notimeout
 " Set tab to indend with 4 space characters
 set shiftwidth=4 expandtab
 
+" Custom indents for filetypes
+filetype plugin indent on
+
 autocmd BufNewFile *.ino 0r ~/.config/nvim/templates/template.ino
