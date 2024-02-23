@@ -64,7 +64,7 @@ alias CD="z"
 # pacman aliases
 alias pacsearch="pacman -Ss"
 alias pacins="sudo pacman -S"
-alias pacup="sudo pacman -Syu"
+alias pacup="sudo pacman -Sy archlinux-keyring --needed && sudo pacman -Syu"
 alias pacrm="sudo pacman -Rns"
 alias pacorphans="pacman -Qdtq"
 
@@ -76,7 +76,10 @@ alias awesomeconf="ranger ~/.config/awesome"
 alias kittyconf="vim ~/.config/kitty/kitty.conf"
 alias fontconf="vim ~/.config/fontconfig/fonts.conf"
 
+# Other aliases
 alias ll="ls -A -h -l --group-directories-first --color=auto"
+alias vol="pamixer --set-volume"
+alias localip="ip -4 -br a"
 
 # University-related aliases
 source ~/.university_aliases
