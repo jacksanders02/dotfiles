@@ -52,6 +52,24 @@ prompt pure
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
+# Functions
+function vol() {
+    if [ $# -eq 0 ]
+    then
+        echo "Required Arguments: vol [int, 0-100]"
+        return
+    fi
+
+    if [ $1 -eq 0 ]
+    then
+        pamixer -m
+    else
+        pamixer -u
+    fi
+
+    pamixer --set-volume $1
+}
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -78,7 +96,6 @@ alias fontconf="vim ~/.config/fontconfig/fonts.conf"
 
 # Other aliases
 alias ll="ls -A -h -l --group-directories-first --color=auto"
-alias vol="pamixer --set-volume"
 alias localip="ip -4 -br a"
 alias portgrep="ss -tanp | grep "
 
