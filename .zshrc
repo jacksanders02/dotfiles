@@ -99,6 +99,11 @@ alias ll="ls -A -h -l --group-directories-first --color=auto"
 alias localip="ip -4 -br a"
 alias portgrep="ss -tanp | grep "
 
+# Git aliases
+alias gqs="git-quick-stats"
+alias gpsh="git push origin"
+alias gpll="git pull origin"
+
 # University-related aliases
 source ~/.university_aliases
 

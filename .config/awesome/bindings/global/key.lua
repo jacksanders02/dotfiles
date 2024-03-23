@@ -80,6 +80,13 @@ awful.keyboard.append_global_keybindings{
         description = 'take a screenshot',
         group       = 'screen',
         on_press    = function() awful.spawn(apps.screenshot) end,
+    },
+    awful.key{
+        modifiers   = {mod.super},
+        key         = ';',
+        description = 'open emoji picker',
+        group       = 'launcher',
+        on_press    = function() awful.spawn(apps.emoji) end,
     }
 }
 
