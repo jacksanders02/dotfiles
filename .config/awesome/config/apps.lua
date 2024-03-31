@@ -3,7 +3,8 @@ local _M = {
     editor = os.getenv('EDITOR')     or 'vim',
     browser = 'firefox-developer-edition',
     screenshot= 'flameshot gui',
-    emoji= 'rofimoji'
+    emoji= 'rofimoji',
+    recorder= 'simplescreenrecorder'
 }
 
 _M.editor_cmd = _M.terminal .. '-1 --class editor -e ' .. _M.editor

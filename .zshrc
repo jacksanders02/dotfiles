@@ -17,6 +17,7 @@ plugins=(
     git
     zsh-autosuggestions
     zsh-syntax-highlighting
+    zsh-you-should-use
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -98,6 +99,7 @@ alias fontconf="vim ~/.config/fontconfig/fonts.conf"
 alias ll="ls -A -h -l --group-directories-first --color=auto"
 alias localip="ip -4 -br a"
 alias portgrep="ss -tanp | grep "
+alias forcekill="kill -9"
 
 # Git aliases
 alias gqs="git-quick-stats"

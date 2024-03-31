@@ -22,7 +22,19 @@ user_files=(
     '.zshrc'
 )
 
+# Install dependencies
+sudo pacman -S xorg-server xorg-xinit xterm flameshot kitty neofetch ranger feh arandr redshift spotify-launcher firefox-developer-edition zoxide pulseaudio pamixer nodejs npm python acpid xdotool rofimoji noto-fonts-emoji rofi jre-openjdk zip unzip inkscape
+
+yay -S awesome-git git-quick-stats spicetify-cli jetbrains-toolbox light neovim-symlinks simplescreenrecorder nm-applet
+
+npm install --global pure-prompt
+
+sudo systemctl enable acpid.service
+
+pulseaudio --start
+
 for file in $user_files; do
+    rm -r $HOME/$file
     ln -s $HOME/dotfiles/$file $HOME/$file
 done
 

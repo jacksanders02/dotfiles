@@ -82,6 +82,13 @@ awful.keyboard.append_global_keybindings{
         on_press    = function() awful.spawn(apps.screenshot) end,
     },
     awful.key{
+        modifiers   = {mod.super, mod.shift},
+        key         = 'r',
+        description = 'take a screen recording',
+        group       = 'screen',
+        on_press    = function() awful.spawn(apps.recorder) end,
+    },
+    awful.key{
         modifiers   = {mod.super},
         key         = ';',
         description = 'open emoji picker',
