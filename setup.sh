@@ -7,6 +7,7 @@ system_files=(
 )
 
 user_files=(
+    '.ssh/config'
     '.config/awesome'
     '.config/flameshot'
     '.config/fontconfig'
@@ -23,7 +24,7 @@ user_files=(
 )
 
 # Install dependencies
-sudo pacman -S xorg-server xorg-xinit xterm flameshot kitty neofetch ranger feh arandr redshift spotify-launcher firefox-developer-edition zoxide pulseaudio pamixer nodejs npm python acpid xdotool rofimoji noto-fonts-emoji rofi jre-openjdk zip unzip inkscape
+sudo pacman -S xorg-server xorg-xinit xterm flameshot kitty neofetch ranger feh arandr redshift spotify-launcher firefox-developer-edition zoxide pulseaudio pamixer nodejs npm python acpid xdotool rofimoji noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra rofi jre-openjdk zip unzip inkscape openssh
 
 yay -S awesome-git git-quick-stats spicetify-cli jetbrains-toolbox light neovim-symlinks simplescreenrecorder nm-applet
 
