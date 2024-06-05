@@ -20,6 +20,7 @@ user_files=(
     '.oh-my-zsh'
     '.xinitrx'
     '.Xresources'
+    '.zlogin'
     '.zshenv'
     '.zshrc'
 )
