@@ -1,6 +1,7 @@
 #!/usr/bin/zsh
 
 system_files=(
+    'etc/environment'
     'etc/udev/rules.d'
     'etc/X11/xorg.conf.d'
     'usr/local/bin/monitor_autoconnect.sh'
