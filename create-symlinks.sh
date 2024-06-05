@@ -5,6 +5,7 @@ system_files=(
     'etc/udev/rules.d'
     'etc/X11/xorg.conf.d'
     'usr/local/bin/monitor_autoconnect.sh'
+    'usr/share/icons/Adwaita/index.theme'
 )
 
 user_files=(
