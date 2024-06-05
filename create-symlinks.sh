@@ -1,6 +1,7 @@
 #!/usr/bin/zsh
 
 system_files=(
+    'etc/environment'
     'etc/udev/rules.d'
     'etc/X11/xorg.conf.d'
     'usr/local/bin/monitor_autoconnect.sh'
@@ -12,14 +13,17 @@ user_files=(
     '.config/flameshot'
     '.config/fontconfig'
     '.config/kitty'
+    '.config/Kvantum'
     '.config/neofetch'
     '.config/nvim'
+    '.config/qt6ct'
     '.config/ranger'
     '.config/redshift'
     '.config/spicetify'
     '.oh-my-zsh'
-    '.xinitrc'
+    '.xinitrx'
     '.Xresources'
+    '.zlogin'
     '.zshenv'
     '.zshrc'
 )

@@ -62,6 +62,13 @@ awful.keyboard.append_global_keybindings{
     },
     awful.key{
         modifiers   = {mod.super},
+        key         = 'f',
+        description = 'open file explorer',
+        group       = 'launcher',
+        on_press    = function() awful.spawn(apps.files) end,
+    },
+    awful.key{
+        modifiers   = {mod.super},
         key         = 'r',
         description = 'run prompt',
         group       = 'launcher',

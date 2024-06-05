@@ -4,7 +4,8 @@ local _M = {
     browser = 'firefox-developer-edition',
     screenshot= 'flameshot gui',
     emoji= 'rofimoji',
-    recorder= 'simplescreenrecorder'
+    recorder= 'simplescreenrecorder',
+    files= 'dolphin'
 }
 
 _M.editor_cmd = _M.terminal .. '-1 --class editor -e ' .. _M.editor
