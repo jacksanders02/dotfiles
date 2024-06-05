@@ -51,6 +51,24 @@ ruled.client.connect_signal('request::rules', function()
         properties = {titlebars_enabled = true},
     }
 
+    -- Floating placement rule
+    ruled.client.append_rule{
+        id         = 'floating_placement',
+        rule_any   = {
+            class = {
+                'spotify',
+                'Spotify',
+                'dolphin'
+            }
+        },
+        properties = {
+            floating  = true,
+            width     = awful.screen.preferred(ruled.client).geometry.width * 0.4,
+            height    = awful.screen.preferred(ruled.client).geometry.height * 0.4,
+            placement = function(...) return awful.placement.centered(...)end
+        }
+    }
+
     -- Set Firefox to always map on the tag named '2' on screen 1.
     -- ruled.client.append_rule {
     --    rule       = {class = 'Firefox'},
