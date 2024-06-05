@@ -7,6 +7,6 @@ run() {
 }
 
 run "redshift"
-run "feh" --bg-fill --randomize --recursive /mnt/shared-storage/Wallpapers/
+run "feh" --bg-fill --randomize --recursive ~/Pictures/Wallpapers/
 run "flameshot"
 run "jetbrains-toolbox"
