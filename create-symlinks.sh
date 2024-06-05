@@ -37,3 +37,5 @@ for file in $system_files; do
     sudo rm -r /$file
     sudo ln -s $HOME/dotfiles/$file /$file
 done
+
+echo "Done! Please logout and back in again for changes to take effect."
