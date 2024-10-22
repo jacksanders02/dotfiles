@@ -29,3 +29,5 @@ set shiftwidth=4 expandtab
 filetype plugin indent on
 
 autocmd BufNewFile *.ino 0r ~/.config/nvim/templates/template.ino
+
+colorscheme catppuccin-frappe

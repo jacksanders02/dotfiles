@@ -1,0 +1,80 @@
+@import "catppuccin-latte.css";
+
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: SFPro, "Font Awesome";
+    font-size: 18px;
+}
+
+window#waybar {
+    background-color: @base;
+    border-bottom: 2px solid @crust;
+    transition-property: background-color;
+    transition-duration: .5s;
+    color: @text;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+.modules-right, .modules-center, .modules-left {
+    padding: 10px 0;
+}
+
+.modules-right {
+    padding-right: 25px;
+}
+
+.modules-left {
+    padding-left: 20px;
+}
+
+#custom-launcher,
+#clock,
+#battery,
+#cpu,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-wlogout{
+    padding: 0px 7px;
+}
+
+#custom-wlogout {
+    font-weight: 900;
+}
+
+#network, #battery {
+    /* added a space to fix weird cutoff, so needs less right padding */
+    padding: 0 4px 0 7px;
+}
+
+@keyframes blink {
+    to {
+        color: @red;
+    }
+}
+
+#battery.critical:not(.charging) {
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#workspaces button {
+    padding: 0 10px 0 6px;
+    color: @text;
+}
+
+#workspaces button.active {
+    background-color: @maroon;
+    color: @base;
+}
+
+#workspaces button:hover {
+    color: @text;
+}

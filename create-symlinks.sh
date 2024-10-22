@@ -1,32 +1,28 @@
 #!/usr/bin/zsh
 
-system_files=(
-    'etc/environment'
-    'etc/udev/rules.d'
-    'etc/X11/xorg.conf.d'
-    'usr/local/bin/monitor_autoconnect.sh'
-    'usr/share/icons/Adwaita/index.theme'
-)
-
 user_files=(
     '.ssh/config'
-    '.config/awesome'
     '.config/flameshot'
     '.config/fontconfig'
+    '.config/hypr'
     '.config/kitty'
-    '.config/Kvantum'
     '.config/neofetch'
     '.config/nvim'
-    '.config/qt6ct'
     '.config/ranger'
-    '.config/redshift'
+    '.config/rofi'
     '.config/spicetify'
+    '.config/swaync'
+    '.config/Thunar'
+    '.config/waybar'
+    '.config/wlogout'
     '.oh-my-zsh'
-    '.xinitrx'
-    '.Xresources'
     '.zlogin'
     '.zshenv'
     '.zshrc'
+)
+
+root_files = (
+    'etc/udev/rules.d/95-hdmi-plug.rules'
 )
 
 for file in $user_files; do
@@ -34,7 +30,7 @@ for file in $user_files; do
     ln -s $HOME/dotfiles/$file $HOME/$file
 done
 
-for file in $system_files; do
+for file in $root_files; do
     sudo rm -r /$file
     sudo ln -s $HOME/dotfiles/$file /$file
 done

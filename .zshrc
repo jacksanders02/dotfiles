@@ -1,3 +1,6 @@
+# Make rvm a function
+source ~/.rvm/scripts/rvm
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -8,6 +11,8 @@ export ZSH=$HOME/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME=""
+
+source ~/.catppuccin/catppuccin_frappe-zsh-syntax-highlighting.zsh
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -106,6 +111,9 @@ alias gqs="git-quick-stats"
 alias gpsh="git push origin"
 alias gpll="git pull origin"
 
+# WM aliases
+alias reload-waybar="killall -SIGUSR2 waybar"
+
 # University-related aliases
 source ~/.university_aliases
 
@@ -117,4 +125,14 @@ if ! pgrep -u "$USER" ssh-agent > /dev/null; then
 fi
 if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# fnm
+FNM_PATH="/home/jacksanders/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/jacksanders/.local/share/fnm:$PATH"
+  eval "`fnm env`"
 fi

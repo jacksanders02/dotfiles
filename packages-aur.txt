@@ -1,0 +1,8 @@
+apple-fonts
+git-quick-stats
+hyprshot
+jetbrains-toolbox
+neovim-symlinks
+spicetify-cli
+swaylock-effects-git
+wlogout

@@ -1,0 +1,94 @@
+{
+    "layer": "top",
+    "spacing": 15,
+    "modules-left": ["custom/wlogout", "hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["pulseaudio", "network", "battery", "custom/bitwarden", "clock"],
+    "sway/window": {
+        "max-length": 50
+    },
+
+    "custom/bitwarden": {
+        "format": " 󰞀 ",
+        "on-click": "bitwarden-desktop"
+    },
+
+    "custom/wlogout": {
+        "format": "<big>󰐥</big>",
+        "on-click": "wlogout"
+    },
+
+    "hyprland/window": {
+        "rewrite": {
+            "(.*) — Firefox Developer Edition": "󰈹   $1",
+            "(.*) - fish": "> [$1]"
+        }
+    },
+
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-bluetooth": "{icon} {volume}% {format_source}",
+        "format-bluetooth-muted": "󰝟 {icon} {format_source}",
+        "format-muted": "󰖁",
+        "format-icons": {
+            "headphone": "󱡏",
+            "hands-free": "󱡏",
+            "headset": "󱡏",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "tooltip-format": "{desc}, {volume}%",
+        "on-click-right": "pavucontrol",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+
+    "network": {
+        "format": "{icon} ",
+        "format-alt": "{ipaddr}/{cidr} {icon} ",
+        "format-alt-click": "click-right",
+        "format-icons": {
+            "wifi": ["󰤯", "󰤟" ,"󰤢", "󰤥", "󰤨"],
+            "ethernet": ["󰈁"],
+            "disconnected": ["󰤮"]
+        },
+        "on-click": "termite -e nmtui",
+        "tooltip-format": "Connected",
+        "tooltip-format-wifi": "{essid} (WiFi, {signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname} (Ethernet)",
+        "tooltip-format-disconnected": "Disconnected"
+    },
+
+    "battery": {
+        "format": "{icon}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂"],
+        "format-charging": "󰚥",
+        "interval": 5,
+        "states": {
+            "warning": 25,
+            "critical": 20
+        },
+        "tooltip-format": "{capacity}%",
+        "tooltip-format-charging": "{capacity}% (Charging)"
+    },
+
+    "clock": {
+        "format": "{:%a %d %b  %H:%M}"
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "󰈮",
+            "3": "󰈹",
+            "4": "󰓇",
+            "6": "󰈹",
+            "7": "",
+            "8": "󰇮",
+            "9": "",
+            "default": "󰣇"
+        }
+    }
+}
