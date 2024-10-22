@@ -6,3 +6,4 @@ neovim-symlinks
 spicetify-cli
 swaylock-effects-git
 wlogout
+catppuccin-gtk-theme-frappe
