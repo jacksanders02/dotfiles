@@ -1,5 +1,12 @@
 #!/usr/bin/zsh
 
+required_directories=(
+    $HOME/.ssh
+    $HOME/.config
+    $HOME/Pictures/wallpapers
+    /etc/udev/rules.d
+)
+
 user_files=(
     '.ssh/config'
     '.config/flameshot'
@@ -22,13 +29,13 @@ user_files=(
     'Pictures/wallpapers/forest.jpg'
 )
 
-root_files = (
+root_files=(
     'etc/udev/rules.d/95-hdmi-plug.rules'
 )
 
-mkdir $HOME/.ssh
-mkdir $HOME/Pictures
-mkdir $HOME/Pictures/wallpapers
+for directory in $required_directories; do
+    sudo mkdir -p $directory
+done
 
 for file in $user_files; do
     rm -r $HOME/$file
