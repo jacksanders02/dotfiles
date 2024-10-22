@@ -19,11 +19,16 @@ user_files=(
     '.zlogin'
     '.zshenv'
     '.zshrc'
+    'Pictures/wallpapers/forest.jpg'
 )
 
 root_files = (
     'etc/udev/rules.d/95-hdmi-plug.rules'
 )
+
+mkdir $HOME/.ssh
+mkdir $HOME/Pictures
+mkdir $HOME/Pictures/wallpapers
 
 for file in $user_files; do
     rm -r $HOME/$file
