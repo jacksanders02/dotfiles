@@ -1,14 +1,19 @@
 #!/usr/bin/zsh
 
-required_directories=(
+required_user_directories=(
     $HOME/.ssh
+    $HOME/.catppuccin
     $HOME/.config
     $HOME/Pictures/wallpapers
+)
+
+required_root_directories=(
     /etc/udev/rules.d
 )
 
 user_files=(
     '.ssh/config'
+    '.catppuccin/catppuccin_frappe-zsh-syntax-highlighting.zsh'
     '.config/flameshot'
     '.config/fontconfig'
     '.config/hypr'
@@ -33,8 +38,12 @@ root_files=(
     'etc/udev/rules.d/95-hdmi-plug.rules'
 )
 
-for directory in $required_directories; do
-    sudo mkdir -p $directory
+for user_directory in $required_user_directories; do
+    mkdir -p $user_directory
+done
+
+for root_directory in $required_root_directories; do
+    sudo mkdir -p $root_directory
 done
 
 for file in $user_files; do
