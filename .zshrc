@@ -76,6 +76,18 @@ function vol() {
     pamixer --set-volume $1
 }
 
+function git-submodule-add() {
+    if [ $# -eq 1 ]
+    then
+        git submodule add $1
+    elif [ $# -eq 2 ]
+    then
+        git submodule add $1 $2
+    fi
+
+    git submodule update --init --recursive
+}
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -110,6 +122,7 @@ alias forcekill="kill -9"
 alias gqs="git-quick-stats"
 alias gpsh="git push origin"
 alias gpll="git pull origin"
+alias git-update-submodules="git submodule foreach git pull origin main"
 
 # WM aliases
 alias reload-waybar="killall -SIGUSR2 waybar"
