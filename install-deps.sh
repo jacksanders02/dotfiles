@@ -9,7 +9,7 @@ flatpak install vesktop
 curl -sSL https://get.rvm.io | bash
 
 # Install fnm
-curl -fsSL https://fnm.vercel.app/install | bash
+curl -fsSL https://fnm.vercel.app/install | bash -s -- --install-dir $HOME/.local/share/fnm --skip-shell
 
 sudo npm install --global pure-prompt
 
