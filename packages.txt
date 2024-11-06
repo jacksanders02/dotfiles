@@ -17,6 +17,7 @@ gimp
 git
 git-lfs
 git-quick-stats
+google-chrome
 grub
 gvfs
 hyprland

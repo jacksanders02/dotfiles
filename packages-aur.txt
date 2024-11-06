@@ -1,5 +1,6 @@
 apple-fonts
 git-quick-stats
+google-chrome
 hyprshot
 jetbrains-toolbox
 neovim-symlinks
@@ -7,3 +8,4 @@ spicetify-cli
 swaylock-effects-git
 wlogout
 yay
+yay-debug
