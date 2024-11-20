@@ -1,0 +1,9 @@
+session_name: genesys-rails
+windows:
+  - window_name: genesys-rails
+    focus: true
+    layout: even-horizontal
+    panes:
+      - dpg up
+      - bin/shakapacker-dev-server
+      - bundle exec rails s
