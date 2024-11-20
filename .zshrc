@@ -124,6 +124,14 @@ alias gpsh="git push origin"
 alias gpll="git pull origin"
 alias git-update-submodules="git submodule foreach git pull origin main"
 
+# Docker aliases
+alias dpg="docker compose -f ~/.dockerfiles/postgres.yml"
+
+# tmux aliases
+alias tmx="tmux new-session -A -s"
+alias tmxkill="tmux kill-ses -t"
+alias tmxls="tmux ls"
+
 # WM aliases
 alias reload-waybar="killall -SIGUSR2 waybar"
 
