@@ -2,6 +2,8 @@ apple-fonts
 git-quick-stats
 google-chrome
 hyprshot
+insomnia-bin
+insomnia-bin-debug
 jetbrains-toolbox
 neovim-symlinks
 spicetify-cli
