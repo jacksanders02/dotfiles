@@ -58,6 +58,7 @@ thunar-volman
 thunderbird
 tk
 tmux
+tmuxp
 ttf-croscore
 ttf-font-awesome
 ttf-iosevka-nerd
