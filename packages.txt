@@ -2,6 +2,9 @@ android-tools
 base
 base-devel
 bitwarden
+blueman
+bluez
+bluez-utils
 brightnessctl
 btop
 clang
@@ -37,6 +40,7 @@ npm
 ntfs-3g
 ntp
 nwg-look
+openfortivpn
 openssh
 os-prober
 otf-font-awesome
@@ -45,10 +49,12 @@ papirus-icon-theme
 pavucontrol
 postgresql-libs
 pulseaudio
+pulseaudio-bluetooth
 python-dbus
 ranger
 rofimoji
 rofi-wayland
+rustup
 spotify-launcher
 sudo
 swayidle

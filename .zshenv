@@ -4,3 +4,4 @@ export EDITOR="vim"
 export FILE_EXPLORER="kitty -1 --class=files --name=filex --title=Ranger ranger"
 export SCREENSHOT="flameshot gui"
 export RANGER_LOAD_DEFAULT_RC=false
+export HYPRSHOT_DIR="$HOME/Pictures/screenshots"
