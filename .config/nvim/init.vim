@@ -23,7 +23,7 @@ set clipboard=unnamedplus
 set notimeout
 
 " Set tab to indend with 4 space characters
-set shiftwidth=4 expandtab
+set tabstop=4 shiftwidth=4 expandtab
 
 " Custom indents for filetypes
 filetype plugin indent on
