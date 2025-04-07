@@ -3,7 +3,7 @@
     "spacing": 15,
     "modules-left": ["custom/wlogout", "hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["pulseaudio", "network", "battery", "custom/bitwarden", "clock"],
+    "modules-right": ["pulseaudio", "battery", "tray", "custom/bitwarden", "clock"],
     "sway/window": {
         "max-length": 50
     },
@@ -23,6 +23,10 @@
             "(.*) — Firefox Developer Edition": "󰈹   $1",
             "(.*) - fish": "> [$1]"
         }
+    },
+
+    "tray": {
+        "spacing": 20
     },
 
     "pulseaudio": {
