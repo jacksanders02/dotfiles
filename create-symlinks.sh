@@ -1,23 +1,13 @@
 #!/usr/bin/zsh
 
-required_user_directories=(
-    $HOME/.ssh
-    $HOME/.catppuccin
-    $HOME/.config
-    $HOME/Pictures/wallpapers
-)
-
-required_root_directories=(
-    /etc/udev/rules.d
-)
-
-user_files=(
+user_symlinks=(
     '.ssh/config'
     '.catppuccin/catppuccin_frappe-zsh-syntax-highlighting.zsh'
     '.config/flameshot'
     '.config/fontconfig'
     '.config/hypr'
     '.config/kitty'
+    '.config/mpv'
     '.config/neofetch'
     '.config/nvim'
     '.config/ranger'
@@ -27,6 +17,7 @@ user_files=(
     '.config/Thunar'
     '.config/waybar'
     '.config/wlogout'
+    '.dockerfiles'
     '.oh-my-zsh'
     '.zlogin'
     '.zshenv'
@@ -36,24 +27,20 @@ user_files=(
 
 root_files=(
     'etc/udev/rules.d/95-hdmi-plug.rules'
+    'etc/NetworkManager/conf.d/00-macrandomize.conf'
+    'etc/NetworkManager/dispatcher.d/09-timezone'
 )
 
-for user_directory in $required_user_directories; do
-    mkdir -p $user_directory
+for symlink in $user_symlinks; do
+    mkdir -p "$HOME/${symlink%/*}"
+    rm -r $HOME/$symlink
+    ln -s $HOME/dotfiles/$symlink $HOME/$symlink
 done
 
-for root_directory in $required_root_directories; do
-    sudo mkdir -p $root_directory
-done
-
-for file in $user_files; do
-    rm -r $HOME/$file
-    ln -s $HOME/dotfiles/$file $HOME/$file
-done
-
-for file in $root_files; do
-    sudo rm -r /$file
-    sudo ln -s $HOME/dotfiles/$file /$file
+for symlink in $root_files; do
+    sudo mkdir -p "$HOME/${symlink%/*}"
+    sudo rm -r /$symlink
+    sudo ln -s $HOME/dotfiles/$symlink /$symlink
 done
 
 echo "Done! Please logout and back in again for changes to take effect."
