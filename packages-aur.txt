@@ -3,13 +3,11 @@ git-quick-stats
 google-chrome
 hyprshot
 insomnia-bin
-insomnia-bin-debug
 jetbrains-toolbox
 neovim-symlinks
 spicetify-cli
-spicetify-cli-debug
 swaylock-effects-git
 ttf-ms-fonts
+tzupdate
 wlogout
 yay
-yay-debug
