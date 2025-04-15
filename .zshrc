@@ -91,6 +91,15 @@ function git-submodule-add() {
     git submodule update --init --recursive
 }
 
+function add_to_path() {
+    for dir in $@; do
+        re="(^$dir:|:$dir:|:$dir$)"
+        if ! [[ $PATH =~ $re ]]; then
+            PATH="$PATH:$dir"
+        fi
+    done
+}
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -151,12 +160,8 @@ if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-# fnm
-FNM_PATH="/home/jacksanders/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="/home/jacksanders/.local/share/fnm:$PATH"
-  eval "`fnm env`"
-fi
+# path variables
+add_to_path \
+    "/usr/local/cuda-12.6/bin" \
+    "$HOME/.local/share/fnm" \
+    "$HOME/.rvm/bin"

@@ -18,6 +18,8 @@ user_symlinks=(
     '.config/waybar'
     '.config/wlogout'
     '.dockerfiles'
+    '.scripts/colour-picker.sh'
+    '.scripts/monitor-connect.sh'
     '.oh-my-zsh'
     '.zlogin'
     '.zshenv'
