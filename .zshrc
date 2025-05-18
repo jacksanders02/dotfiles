@@ -145,7 +145,7 @@ alias tmxkill="tmux kill-ses -t"
 alias tmxls="tmux ls"
 
 # WM aliases
-alias reload-waybar="killall -SIGUSR2 waybar"
+alias reload-waybar="pkill waybar && hyprctl dispatch exec waybar"
 
 # University-related aliases
 source ~/.university_aliases
@@ -162,6 +162,6 @@ fi
 
 # path variables
 add_to_path \
-    "/usr/local/cuda-12.6/bin" \
+    "/opt/cuda/extras/compute-sanitizer" \
     "$HOME/.local/share/fnm" \
     "$HOME/.rvm/bin"
